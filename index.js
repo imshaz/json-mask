@@ -28,14 +28,6 @@ const mask = (objOrArr) => {
     } else {
       let maskedValue = "";
 
-      console.log("=======");
-      console.log({
-        key,
-        maskedField: objOrArr[key],
-        include: maskedFieldsKeys.includes(key),
-      });
-      console.log("=======");
-
       masked[key] = objOrArr[key];
       if (maskedFieldsKeys.includes(key)) {
         [...objOrArr[key]].forEach((item) => {
